@@ -542,7 +542,7 @@ nav {
   border-radius:    50%;
   background:       #0d1535;
   z-index:          2;
-  background-image:    url('/portfolio-react/image/Untitled_design.png');
+  background-image:    url('/image/Untitled_design.png');
   background-position: center;
   background-size:     cover;
 }
