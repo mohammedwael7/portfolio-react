@@ -71,7 +71,7 @@ nav {
   left:   0;
   right:  0;
   z-index:           100;
-  padding:           1.1rem 2.5rem;
+  padding:           1rem 2.5rem 0.5rem;
   display:           flex;
   justify-content:   space-between;
   align-items:       center;
@@ -90,6 +90,7 @@ nav {
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
+  background: rgba(7, 9, 26, 0.88);
 }
 
 .nav-logo-img {
@@ -340,6 +341,7 @@ nav {
   padding:         7rem 8% 3rem;
   position:        relative;
   overflow:        hidden;
+  margin-top:      3rem;
 }
 
 /* Subtle radial glow behind photo */
@@ -540,7 +542,7 @@ nav {
   border-radius:    50%;
   background:       #0d1535;
   z-index:          2;
-  background-image:    url('/image/Untitled_design.png');
+  background-image:    url('/portfolio-react/image/Untitled_design.png');
   background-position: center;
   background-size:     cover;
 }
@@ -1422,7 +1424,7 @@ section { padding: 6rem 8%; }
   .hero {
     flex-direction: column;
     text-align:     center;
-    padding-top:    6rem;
+    padding-top:    9rem;
     gap:            2.5rem;
   }
 

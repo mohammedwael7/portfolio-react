@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 /* ── Reusable SVG Icons ── */
 const GitHubSVG = () => (
@@ -36,9 +37,8 @@ export default function App() {
 
   /* ── EmailJS init ── */
   useEffect(() => {
-    if (window.emailjs) window.emailjs.init("WrORHq1Rlg4HU_hIl");
+    emailjs.init("WrORHq1Rlg4HU_hIl");
   }, []);
-
   /* ── Scroll Reveal ── */
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -108,8 +108,8 @@ export default function App() {
       return;
     }
     setIsSending(true);
-    window.emailjs
-      .send("service_eb6q8q8", "template_fcl9yn8", { from_name: name, from_email: email, message, to_name: "Mohammed Wael" })
+    emailjs
+      .send("service_eb6q8q8", "template_z8zt0z8", { from_name: name, from_email: email, message, to_name: "Mohammed Wael" })
       .then(() => {
         setFormStatus({ type: "success", text: "✅ Message sent successfully! I'll get back to you soon." });
         setFormData({ name: "", email: "", message: "" });
@@ -133,7 +133,8 @@ export default function App() {
       {/* ══ NAVBAR ══ */}
       <nav id="navbar">
         <a href="#home" className="nav-logo-link" aria-label="Home">
-          <img src="/image/My_logo.png" alt="Logo" className="nav-logo-img" />
+          <img src={`${import.meta.env.BASE_URL}image/My_logo.png`} alt="Logo" className="nav-logo-img" style={{ width: "80px", height: "80px",margin:"auto", borderRadius: "50%", objectFit: "cover",
+                background: " var(--bg)", border: "2px solid var(--accent2)" }}  />
         </a>
         <ul className="nav-pills" role="list">
           {navItems.map((id) => (
@@ -175,6 +176,26 @@ export default function App() {
           ))}
           <a href="#contact" className="sidebar-cta" onClick={() => setSidebarOpen(false)}>📩 Contact Me</a>
         </nav>
+
+        {/* LinkedIn logo at bottom of sidebar */}
+        <div style={{ marginTop: "auto", paddingTop: "2rem", display: "flex", flexDirection: "column",  justifyContent: "center" }}>
+          <div className="hero-socials">
+            <a href="https://github.com/mohammedwael7" className="soc-btn" title="GitHub" target="_blank" rel="noopener"><GitHubSVG /></a>
+            <a href="https://www.linkedin.com/in/mohammed-wael-gadallah" className="soc-btn" title="LinkedIn" target="_blank" rel="noopener"><LinkedInSVG /></a>
+            <a href="mailto:mohammedpanda60@gmail.com" className="soc-btn" title="Email" target="_blank"><EmailSVG /></a>
+            <a href="https://wa.me/201034320898" className="soc-btn" title="WhatsApp" target="_blank"><PhoneSVG /></a>
+          </div>
+          <br />
+          <div>
+          <a href="#home"  rel="noopener"
+            title="LinkedIn" onClick={() => setSidebarOpen(false)} >
+            <img src={`${import.meta.env.BASE_URL}image/My_logo.png`}
+              alt="Mohammed Wael Logo"
+              style={{ width: "100px", height: "100px",margin:"auto", borderRadius: "50%", objectFit: "cover",
+                 border: "2px solid var(--accent2)" }} />
+          </a>
+          </div>
+        </div>
       </aside>
 
       {/* ══ HERO ══ */}
@@ -253,7 +274,7 @@ export default function App() {
           <div className="tl-dot"></div>
           <div className="flex-card-container">
             <div className="logo-display-box">
-              <img src="/image/University_Logo.jfif" alt="Zagazig University Logo" loading="lazy" />
+              <img src={`${import.meta.env.BASE_URL}image/University_Logo.jfif`} alt="Zagazig University Logo" loading="lazy" />
             </div>
             <div className="card-info-content">
               <div className="tl-period">Oct 2023 – Present</div>
@@ -272,7 +293,7 @@ export default function App() {
               <div className="tl-dot"></div>
               <div className="flex-card-container">
                 <div className="logo-display-box">
-                  <img src="/image/Creativa_logo.jfif" alt="Creativa Innovation Hubs Logo" loading="lazy" />
+                  <img src={`${import.meta.env.BASE_URL}image/Creativa_logo.jfif`} alt="Creativa Innovation Hubs Logo" loading="lazy" />
                 </div>
                 <div className="card-info-content">
                   <div className="tl-period">Feb 2026 • 3-Day Intensive Training (21 Hours)</div>
@@ -292,7 +313,7 @@ export default function App() {
               <div className="tl-dot"></div>
               <div className="flex-card-container">
                 <div className="logo-display-box">
-                  <img src="/image/Programming_advice_logo.png" alt="Programming Advices Academy Logo" loading="lazy" />
+                  <img src={`${import.meta.env.BASE_URL}image/Programming_advice_logo.png`} alt="Programming Advices Academy Logo" loading="lazy" />
                 </div>
                 <div className="card-info-content">
                   <div className="tl-role">Programming Foundations</div>
@@ -310,7 +331,7 @@ export default function App() {
               <div className="tl-dot"></div>
               <div className="flex-card-container">
                 <div className="logo-display-box">
-                  <img src="/image/Programming_advice_logo.png" alt="Programming Advices Academy Logo" loading="lazy" />
+                  <img src={`${import.meta.env.BASE_URL}image/Programming_advice_logo.png`} alt="Programming Advices Academy Logo" loading="lazy" />
                 </div>
                 <div className="card-info-content">
                   <div className="tl-role">Algorithms &amp; Problem-Solving Level 1</div>
@@ -330,7 +351,7 @@ export default function App() {
               <div className="tl-dot"></div>
               <div className="flex-card-container">
                 <div className="logo-display-box">
-                  <img src="/image/Programming_advice_logo.png" alt="Programming Advices Academy Logo" loading="lazy" />
+                  <img src={`${import.meta.env.BASE_URL}image/Programming_advice_logo.png`} alt="Programming Advices Academy Logo" loading="lazy" />
                 </div>
                 <div className="card-info-content">
                   <div className="tl-role">Programming Using C++ - Level 1</div>
@@ -348,7 +369,7 @@ export default function App() {
               <div className="tl-dot"></div>
               <div className="flex-card-container">
                 <div className="logo-display-box">
-                  <img src="/image/Programming_advice_logo.png" alt="Programming Advices Academy Logo" loading="lazy" />
+                  <img src={`${import.meta.env.BASE_URL}image/Programming_advice_logo.png`} alt="Programming Advices Academy Logo" loading="lazy" />
                 </div>
                 <div className="card-info-content">
                   <div className="tl-role">Algorithms &amp; Problem-Solving Level 1 Solutions</div>
@@ -366,7 +387,7 @@ export default function App() {
               <div className="tl-dot"></div>
               <div className="flex-card-container">
                 <div className="logo-display-box">
-                  <img src="/image/Programming_advice_logo.png" alt="Programming Advices Academy Logo" loading="lazy" />
+                  <img src={`${import.meta.env.BASE_URL}image/Programming_advice_logo.png`} alt="Programming Advices Academy Logo" loading="lazy" />
                 </div>
                 <div className="card-info-content">
                   <div className="tl-role">Algorithms &amp; Problem-Solving Level 2</div>
@@ -459,7 +480,7 @@ export default function App() {
             <div className="tl-dot"></div>
             <div className="flex-card-container">
               <div className="logo-display-box">
-                <img src="/image/depi_logo.jpg" alt="DEPI Logo" loading="lazy" />
+                <img src={`${import.meta.env.BASE_URL}image/depi_logo.jpg`} alt="DEPI Logo" loading="lazy" />
               </div>
               <div className="card-info-content">
                 <div className="tl-period">Nov 2025 – Present</div>
@@ -482,7 +503,7 @@ export default function App() {
             <div className="tl-dot"></div>
             <div className="flex-card-container">
               <div className="logo-display-box">
-                <img src="/image/Creativa_logo.jfif" alt="Creativa Logo" loading="lazy" />
+                <img src={`${import.meta.env.BASE_URL}image/Creativa_logo.jfif`} alt="Creativa Logo" loading="lazy" />
               </div>
               <div className="card-info-content">
                 <div className="tl-period">Nov 2025 – Feb 2026</div>
@@ -632,7 +653,7 @@ export default function App() {
           {/* Project 1 */}
           <div className="proj-card">
             <div className="proj-img-wrapper">
-              <img src="/image/3-web_development.png" alt="Web Development Tracks Mockup" loading="lazy" />
+              <img src={`${import.meta.env.BASE_URL}image/3-web_development.png`} alt="Web Development Tracks Mockup" loading="lazy" />
             </div>
             <div className="proj-content">
               <div className="proj-title">Web Development Tracks</div>
@@ -659,7 +680,7 @@ export default function App() {
           {/* Project 2 */}
           <div className="proj-card">
             <div className="proj-img-wrapper">
-              <img src="/image/2-57357.png" alt="57357 Hospital Website Mockup" loading="lazy" />
+              <img src={`${import.meta.env.BASE_URL}image/2-57357.png`} alt="57357 Hospital Website Mockup" loading="lazy" />
             </div>
             <div className="proj-content">
               <div className="proj-title">57357 Hospital Website</div>
@@ -685,7 +706,7 @@ export default function App() {
           {/* Project 3 */}
           <div className="proj-card">
             <div className="proj-img-wrapper">
-              <img src="/image/1.png" alt="Wallpapers Website Mockup" loading="lazy" />
+              <img src={`${import.meta.env.BASE_URL}image/1.png`} alt="Wallpapers Website Mockup" loading="lazy" />
             </div>
             <div className="proj-content">
               <div className="proj-title">Wallpapers Website</div>
@@ -722,7 +743,7 @@ export default function App() {
         <div className="act-grid reveal">
           <div className="act-card">
             <div className="logo-display-box">
-              <img src="/image/IEEE_logo.jfif" alt="IEEE Logo" loading="lazy" />
+              <img src={`${import.meta.env.BASE_URL}image/IEEE_logo.jfif`} alt="IEEE Logo" loading="lazy" />
             </div>
             <div className="act-text">
               <strong>Public Relations (PR) Volunteer – IEEE OE</strong>
@@ -733,7 +754,7 @@ export default function App() {
           </div>
           <div className="act-card">
             <div className="logo-display-box">
-              <img src="/image/University_Logo.jfif" alt="Zagazig University Logo" loading="lazy" />
+              <img src={`${import.meta.env.BASE_URL}image/University_Logo.jfif`} alt="Zagazig University Logo" loading="lazy" />
             </div>
             <div className="act-text">
               <strong>Leadership – Class Representative</strong>
@@ -853,7 +874,7 @@ export default function App() {
           <div>
             <div className="footer-logo">
               <a href="#home" className="nav-logo-link" aria-label="Home">
-                <img src="/image/My_logo.png" alt="Logo" className="nav-logo-img" />
+                <img src={`${import.meta.env.BASE_URL}image/My_logo.png`} alt="Logo" className="nav-logo-img" />
               </a>
             </div>
             <p style={{ color: "var(--muted)", lineHeight: "1.6", marginTop: "1rem" }}>
