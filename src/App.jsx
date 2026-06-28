@@ -658,10 +658,41 @@ export default function App() {
           {/* Project 1 */}
           <div className="proj-card">
             <div className="proj-img-wrapper">
-              <img src={`${import.meta.env.BASE_URL}image/3-web_development.png`} alt="Web Development Tracks Mockup" loading="lazy" />
+              <img src={`${import.meta.env.BASE_URL}image/1-CleanHub.png`} alt="AL Rayyan CleanHub" loading="eager" />
             </div>
             <div className="proj-content">
-              <div className="proj-title">Web Development Tracks</div>
+              <div className="proj-title">AL Rayyan CleanHub</div>
+              <div className="proj-desc">
+                <span className="Challenge">Challenge:</span><br />
+                Built a modern landing page for AL Rayyan CleanHub dry cleaning service with the goal of making it easier for customers to access services, contact information, location details, and pricing.<br />
+                <span className="Action">Action:</span><br />
+                Developed a responsive React landing page using Bootstrap components to create a clean user interface. Organized the content to improve customer experience and make important information easy to find.<br />
+                <span className="Result">Result:</span><br />
+                Created a professional and responsive website that provides a smooth user experience and helps customers quickly connect with the dry cleaning service.
+              </div>
+              <div className="skill-tags">
+              <span className="skill-tag devicon-html5-plain i-html"> HTML</span>
+              <span className="skill-tag devicon-css3-plain i-css"> CSS</span>
+              <span className="skill-tag devicon-javascript-plain i-js"> JavaScript</span>
+              <span className="skill-tag devicon-bootstrap-plain i-bootstrap"> Bootstrap</span>
+              <span className="skill-tag devicon-react-original-wordmark i-react"> React</span>
+
+              </div>
+              <div className="proj-footer hero-socials">
+                <a href="https://clean-hub-al-rayyan-ykhm.vercel.app/" className="btn-link" target="_blank"><span>🌐</span> Live Demo</a>
+                <a href="https://github.com/mohammedwael7/Clean-Hub-Al-Rayyan" className="soc-btn" title="GitHub" target="_blank"><GitHubSVG /></a>
+              </div>
+            </div>
+          </div>
+
+
+          {/* Project 2 */}
+          <div className="proj-card">
+            <div className="proj-img-wrapper">
+              <img src={`${import.meta.env.BASE_URL}image/3-web_development.png`} alt="Web Development Guide" loading="eager" />
+            </div>
+            <div className="proj-content">
+              <div className="proj-title">Web Development Guide</div>
               <div className="proj-desc">
                 <span className="Challenge">Challenge:</span><br />
                 Designing an educational platform to showcase different web development career paths.<br />
@@ -670,69 +701,49 @@ export default function App() {
                 <span className="Result">Result:</span><br />
                 Delivered a functional, interactive platform that helps learners explore and enroll in web development tracks easily.
               </div>
-              <div className="proj-tech">
-                <span className="skill-tag devicon-html5-plain" style={{ color: "#e34f26" }}> HTML</span>
-                <span className="skill-tag devicon-css3-plain" style={{ color: "#1572b6" }}> CSS</span>
-                <span className="skill-tag devicon-javascript-plain" style={{ color: "#f7df1e" }}> JavaScript</span>
+              <div className="skill-tags">
+              <span className="skill-tag devicon-html5-plain i-html"> HTML</span>
+              <span className="skill-tag devicon-css3-plain i-css"> CSS</span>
+              <span className="skill-tag devicon-javascript-plain i-js"> JavaScript</span>
+              <span className="skill-tag devicon-bootstrap-plain i-bootstrap"> Bootstrap</span>
               </div>
               <div className="proj-footer hero-socials">
-                <a href="#" className="btn-link" target="_blank"><span>🌐</span> Live Demo</a>
-                <a href="#" className="soc-btn" title="GitHub" target="_blank"><GitHubSVG /></a>
+                <a href="https://mohammedwael7.github.io/Web-Tracks/" className="btn-link" target="_blank"><span>🌐</span> Live Demo</a>
+                <a href="https://github.com/mohammedwael7/Web-Tracks" className="soc-btn" title="GitHub" target="_blank"><GitHubSVG /></a>
               </div>
             </div>
           </div>
 
-          {/* Project 2 */}
-          <div className="proj-card">
-            <div className="proj-img-wrapper">
-              <img src={`${import.meta.env.BASE_URL}image/2-57357.png`} alt="57357 Hospital Website Mockup" loading="lazy" />
-            </div>
-            <div className="proj-content">
-              <div className="proj-title">57357 Hospital Website</div>
-              <div className="proj-desc">
-                <span className="Challenge">Challenge:</span><br />
-                Creating a multi-page hospital website with various sections like news, careers, and donations.<br />
-                <span className="Action">Action:</span><br />
-                Developed the website using pure HTML and CSS, structuring multiple pages and styling them for a professional look.<br />
-                <span className="Result">Result:</span><br />
-                Delivered a fully functional hospital website clone with organized content and user-friendly navigation.
-              </div>
-              <div className="proj-tech">
-                <span className="skill-tag devicon-html5-plain" style={{ color: "#e34f26" }}> HTML</span>
-                <span className="skill-tag devicon-css3-plain" style={{ color: "#1572b6" }}> CSS</span>
-              </div>
-              <div className="proj-footer hero-socials">
-                <a href="#" className="btn-link" target="_blank"><span>🌐</span> Live Demo</a>
-                <a href="#" className="soc-btn" title="GitHub" target="_blank"><GitHubSVG /></a>
-              </div>
-            </div>
-          </div>
 
           {/* Project 3 */}
           <div className="proj-card">
             <div className="proj-img-wrapper">
-              <img src={`${import.meta.env.BASE_URL}image/1.png`} alt="Wallpapers Website Mockup" loading="lazy" />
+              <img src={`${import.meta.env.BASE_URL}image/2.jpg`} alt="Stone-Paper-Scissors-Game" loading="eager" />
             </div>
             <div className="proj-content">
-              <div className="proj-title">Wallpapers Website</div>
+              <div className="proj-title">Stone-Paper-Scissors-Game</div>
               <div className="proj-desc">
                 <span className="Challenge">Challenge:</span><br />
-                Creating a responsive wallpaper gallery website with smooth browsing and download features.<br />
+                Designed a console-based Stone, Paper, Scissors game while applying Object-Oriented Programming concepts and improving problem-solving skills. The main challenge was creating a clean structure with reusable logic and handling different game scenarios.<br />
                 <span className="Action">Action:</span><br />
-                Built the website using HTML and CSS, implementing responsive design and smooth image navigation for users.<br />
+                Developed the game using C++ with OOP principles, including classes, objects, encapsulation, and organized game flow. Implemented the core logic and user interactions to create a smooth gameplay experience.<br />
                 <span className="Result">Result:</span><br />
-                Delivered an interactive, user-friendly wallpaper gallery that allows easy browsing and downloading of images.
+                Delivered a fully functional and well-structured C++ project that demonstrates strong OOP fundamentals, logical thinking, and clean code organization.
               </div>
-              <div className="proj-tech">
-                <span className="skill-tag devicon-html5-plain" style={{ color: "#e34f26" }}> HTML</span>
-                <span className="skill-tag devicon-css3-plain" style={{ color: "#1572b6" }}> CSS</span>
+              <div className="skill-tags">
+                <span className="skill-tag devicon-cplusplus-plain i-cpp"> C++</span>
+                <span className="skill-tag fas fa-puzzle-piece i-prob"> Problem Solving</span>
+                <span className="skill-tag fas fa-code-branch i-algo"> Algorithms</span>
+                <span className="skill-tag fas fa-cubes i-oop"> OOP</span>
               </div>
               <div className="proj-footer hero-socials">
-                <a href="https://mohammedwael7.github.io/Wallpaper-Website/" className="btn-link" target="_blank"><span>🌐</span> Live Demo</a>
-                <a href="https://github.com/mohammedwael7/Wallpaper-Website" className="soc-btn" title="GitHub" target="_blank"><GitHubSVG /></a>
+                {/* <a href="#" className="btn-link" target="_blank"><span>🌐</span> Live Demo</a> */}
+                <a href="https://github.com/mohammedwael7/Stone-Paper-Scissors-Game" className="soc-btn" title="GitHub" target="_blank"><GitHubSVG /></a>
               </div>
             </div>
           </div>
+
+
         </div>
       </section>
 
@@ -767,8 +778,8 @@ export default function App() {
               <strong>PR Member – IEEE OE</strong>
               <span style={{ color: "var(--accent2)", fontSize: "0.9rem", display: "block", marginBottom: "0.5rem" }}>Nov 2025 – Present</span>
               <p>Managed communication with companies and startups for partnerships and sponsorship opportunities, delivered a 15-minute Operating Systems session, and supported the organization of IEEE Synapse event with 1000+ attendees.</p>
-              <a  href="https://www.linkedin.com/feed/update/urn:li:activity:7411410713463758848/"  target="_blank" rel="noopener" className="soc-btn" title="View on LinkedIn" style={{ marginTop: "0.8rem" }}><LinkedInSVG /></a><span> </span>
-              <a  href="https://www.linkedin.com/feed/update/urn:li:activity:7401600664843243520/"  target="_blank" rel="noopener" className="soc-btn" title="View on LinkedIn" style={{ marginTop: "0.8rem" }}><LinkedInSVG /></a>
+              <a href="https://www.linkedin.com/feed/update/urn:li:activity:7411410713463758848/" target="_blank" rel="noopener" className="soc-btn" title="View on LinkedIn" style={{ marginTop: "0.8rem" }}><LinkedInSVG /></a><span> </span>
+              <a href="https://www.linkedin.com/feed/update/urn:li:activity:7401600664843243520/" target="_blank" rel="noopener" className="soc-btn" title="View on LinkedIn" style={{ marginTop: "0.8rem" }}><LinkedInSVG /></a>
 
             </div>
           </div>
