@@ -216,7 +216,7 @@ export default function App() {
               </svg>
               View My Work
             </a>
-            <a href="https://drive.google.com/file/d/1By-8sAf_vXq3e67g_TF05jLuWuJO05I_/view?usp=drive_link" className="btn-dark" target="_blank" rel="noopener">
+            <a href="https://drive.google.com/file/d/1Blk3jeis8_5ydTAcSSa5LcJGRxFc_cVQ/view?usp=drive_link" className="btn-dark" target="_blank" rel="noopener">
               <svg viewBox="0 0 16 16" fill="currentColor" width="15" height="15" aria-hidden="true">
                 <path d="M.5 9.9V14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V9.9a.5.5 0 0 0-1 0V14H1.5V9.9a.5.5 0 0 0-1 0z" />
                 <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 1 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
@@ -654,6 +654,7 @@ export default function App() {
           </div>
         </div>
         <div className="proj-grid reveal">
+
           {/* Project 1 */}
           <div className="proj-card">
             <div className="proj-img-wrapper">
@@ -766,7 +767,7 @@ export default function App() {
               <strong>PR Member – IEEE OE</strong>
               <span style={{ color: "var(--accent2)", fontSize: "0.9rem", display: "block", marginBottom: "0.5rem" }}>Nov 2025 – Present</span>
               <p>Managed communication with companies and startups for partnerships and sponsorship opportunities, delivered a 15-minute Operating Systems session, and supported the organization of IEEE Synapse event with 1000+ attendees.</p>
-              <a  href="https://www.linkedin.com/feed/update/urn:li:activity:7411410713463758848/"  target="_blank" rel="noopener" className="soc-btn" title="View on LinkedIn" style={{ marginTop: "0.8rem" }}><LinkedInSVG /></a>
+              <a  href="https://www.linkedin.com/feed/update/urn:li:activity:7411410713463758848/"  target="_blank" rel="noopener" className="soc-btn" title="View on LinkedIn" style={{ marginTop: "0.8rem" }}><LinkedInSVG /></a><span> </span>
               <a  href="https://www.linkedin.com/feed/update/urn:li:activity:7401600664843243520/"  target="_blank" rel="noopener" className="soc-btn" title="View on LinkedIn" style={{ marginTop: "0.8rem" }}><LinkedInSVG /></a>
 
             </div>
