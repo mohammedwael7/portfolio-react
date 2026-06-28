@@ -169,9 +169,9 @@ export default function App() {
           <span>Mohammed Wael</span>
         </div>
         <nav className="sidebar-nav">
-          {[["#home","🏠 Home"],["#about","👤 About"],["#education","🎓 Education"],["#skills","🛠 Skills"],
-            ["#experience","💼 Experience"],["#services","⚙️ Services"],["#projects","📂 Projects"],
-            ["#activities","🏆 Activities"],["#testimonials","💬 Testimonials"]].map(([href, label]) => (
+          {[["#home","Home"],["#about","About"],["#education","Education"],["#skills","Skills"],
+            ["#experience","Experience"],["#services","Services"],["#projects","Projects"],
+            ["#activities","Activities"],["#testimonials","Testimonials"]].map(([href, label]) => (
             <a key={href} href={href} onClick={() => setSidebarOpen(false)}>{label}</a>
           ))}
           <a href="#contact" className="sidebar-cta" onClick={() => setSidebarOpen(false)}>📩 Contact Me</a>
