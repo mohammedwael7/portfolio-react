@@ -637,8 +637,8 @@ export default function App() {
               <button className="btn-price" onClick={scrollToContact}>Contact Me</button>
             </div>
           </div>
-        </div>
-      </section> */}
+        </div>*/}
+      </section> 
 
       {/* ══ PROJECTS ══ */}
       <section id="projects">
