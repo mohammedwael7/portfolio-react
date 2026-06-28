@@ -126,15 +126,17 @@ export default function App() {
 
   const scrollToContact = () => document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
 
-  const navItems = ["home","about","education","skills","experience","services","projects","activities","testimonials"];
+  const navItems = ["home", "about", "education", "skills", "experience", "services", "projects", "Volanteering", "testimonials"];
 
   return (
     <>
       {/* ══ NAVBAR ══ */}
       <nav id="navbar">
         <a href="#home" className="nav-logo-link" aria-label="Home">
-          <img src={`${import.meta.env.BASE_URL}image/My_logo.png`} alt="Logo" className="nav-logo-img" style={{ width: "80px", height: "80px",margin:"auto", borderRadius: "50%", objectFit: "cover",
-                background: " var(--bg)", border: "2px solid var(--accent2)" }}  />
+          <img src={`${import.meta.env.BASE_URL}image/My_logo.png`} alt="Logo" className="nav-logo-img" style={{
+            width: "80px", height: "80px", margin: "auto", borderRadius: "50%", objectFit: "cover",
+            background: " var(--bg)", border: "2px solid var(--accent2)"
+          }} />
         </a>
         <ul className="nav-pills" role="list">
           {navItems.map((id) => (
@@ -169,31 +171,33 @@ export default function App() {
           <span>Mohammed Wael</span>
         </div>
         <nav className="sidebar-nav">
-          {[["#home","Home"],["#about","About"],["#education","Education"],["#skills","Skills"],
-            ["#experience","Experience"],["#services","Services"],["#projects","Projects"],
-            ["#activities","Activities"],["#testimonials","Testimonials"]].map(([href, label]) => (
+          {[["#home", "Home"], ["#about", "About"], ["#education", "Education"], ["#skills", "Skills"],
+          ["#experience", "Experience"], ["#services", "Services"], ["#projects", "Projects"],
+          ["#Volanteering", "Volanteering"], ["#testimonials", "Testimonials"]].map(([href, label]) => (
             <a key={href} href={href} onClick={() => setSidebarOpen(false)}>{label}</a>
           ))}
           <a href="#contact" className="sidebar-cta" onClick={() => setSidebarOpen(false)}>📩 Contact Me</a>
         </nav>
 
         {/* LinkedIn logo at bottom of sidebar */}
-        <div style={{ marginTop: "auto", paddingTop: "2rem", display: "flex", flexDirection: "column",  justifyContent: "center" }}>
+        <div style={{ marginTop: "auto", paddingTop: "2rem", display: "flex", flexDirection: "column", justifyContent: "center" }}>
           <div className="hero-socials">
             <a href="https://github.com/mohammedwael7" className="soc-btn" title="GitHub" target="_blank" rel="noopener"><GitHubSVG /></a>
-            <a href="https://www.linkedin.com/in/mohammed-wael-gadallah" className="soc-btn" title="LinkedIn" target="_blank" rel="noopener"><LinkedInSVG /></a>
-            <a href="mailto:mohammedpanda60@gmail.com" className="soc-btn" title="Email" target="_blank"><EmailSVG /></a>
+            <a href="https://www.linkedin.com/in/m0hamedwael" className="soc-btn" title="LinkedIn" target="_blank" rel="noopener"><LinkedInSVG /></a>
+            <a href="mailto:mohammedwaelgadallah@gmail.com" className="soc-btn" title="Email" target="_blank"><EmailSVG /></a>
             <a href="https://wa.me/201034320898" className="soc-btn" title="WhatsApp" target="_blank"><PhoneSVG /></a>
           </div>
           <br />
           <div>
-          <a href="#home"  rel="noopener"
-            title="LinkedIn" onClick={() => setSidebarOpen(false)} >
-            <img src={`${import.meta.env.BASE_URL}image/My_logo.png`}
-              alt="Mohammed Wael Logo"
-              style={{ width: "100px", height: "100px",margin:"auto", borderRadius: "50%", objectFit: "cover",
-                 border: "2px solid var(--accent2)" }} />
-          </a>
+            <a href="#home" rel="noopener"
+              title="LinkedIn" onClick={() => setSidebarOpen(false)} >
+              <img src={`${import.meta.env.BASE_URL}image/My_logo.png`}
+                alt="Mohammed Wael Logo"
+                style={{
+                  width: "100px", height: "100px", margin: "auto", borderRadius: "50%", objectFit: "cover",
+                  border: "2px solid var(--accent2)"
+                }} />
+            </a>
           </div>
         </div>
       </aside>
@@ -222,8 +226,8 @@ export default function App() {
           </div>
           <div className="hero-socials">
             <a href="https://github.com/mohammedwael7" className="soc-btn" title="GitHub" target="_blank" rel="noopener"><GitHubSVG /></a>
-            <a href="https://www.linkedin.com/in/mohammed-wael-gadallah" className="soc-btn" title="LinkedIn" target="_blank" rel="noopener"><LinkedInSVG /></a>
-            <a href="mailto:mohammedpanda60@gmail.com" className="soc-btn" title="Email" target="_blank"><EmailSVG /></a>
+            <a href="https://www.linkedin.com/in/m0hamedwael" className="soc-btn" title="LinkedIn" target="_blank" rel="noopener"><LinkedInSVG /></a>
+            <a href="mailto:mohammedwaelgadallah@gmail.com" className="soc-btn" title="Email" target="_blank"><EmailSVG /></a>
             <a href="https://wa.me/201034320898" className="soc-btn" title="WhatsApp" target="_blank"><PhoneSVG /></a>
           </div>
         </div>
@@ -293,7 +297,7 @@ export default function App() {
               <div className="tl-dot"></div>
               <div className="flex-card-container">
                 <div className="logo-display-box">
-                  <img src={`${import.meta.env.BASE_URL}image/Creativa_logo.jfif`} alt="Creativa Innovation Hubs Logo" loading="lazy" />
+                  <img src={`${import.meta.env.BASE_URL}image/Itida logo.png`} alt="Creativa Innovation Hubs Logo" loading="lazy" />
                 </div>
                 <div className="card-info-content">
                   <div className="tl-period">Feb 2026 • 3-Day Intensive Training (21 Hours)</div>
@@ -484,7 +488,7 @@ export default function App() {
               </div>
               <div className="card-info-content">
                 <div className="tl-period">Nov 2025 – Present</div>
-                <div className="tl-role">.NET Full-Stack Trainee</div>
+                <div className="tl-role">.NET Full-Stack Intern</div>
                 <div className="tl-org">Digital Egypt Pioneers Initiative (DEPI)</div>
                 <div className="tl-desc">
                   <span className="Challenge">Challenge:</span><br />
@@ -498,16 +502,16 @@ export default function App() {
             </div>
           </div>
 
-          {/* Creativa Web Diploma */}
+          {/*Itida Web Diploma */}
           <div className="tl-item">
             <div className="tl-dot"></div>
             <div className="flex-card-container">
               <div className="logo-display-box">
-                <img src={`${import.meta.env.BASE_URL}image/Creativa_logo.jfif`} alt="Creativa Logo" loading="lazy" />
+                <img src={`${import.meta.env.BASE_URL}image/Itida logo.png`} alt="Itida Logo" loading="lazy" />
               </div>
               <div className="card-info-content">
                 <div className="tl-period">Nov 2025 – Feb 2026</div>
-                <div className="tl-role">Web Development Diploma</div>
+                <div className="tl-role">Web Development Intern</div>
                 <div className="tl-org">Creativa Innovation Hubs – ITIDA</div>
                 <div className="tl-desc">
                   <span className="Challenge">Challenge:</span><br />
@@ -638,7 +642,7 @@ export default function App() {
             </div>
           </div>
         </div>*/}
-      </section> 
+      </section>
 
       {/* ══ PROJECTS ══ */}
       <section id="projects">
@@ -731,33 +735,49 @@ export default function App() {
         </div>
       </section>
 
-      {/* ══ ACTIVITIES ══ */}
-      <section className="alt-bg" id="activities">
+      {/* ══ Volanteering ══ */}
+      <section className="alt-bg" id="Volanteering">
         <div className="reveal">
           <div className="section-label">Beyond Code</div>
           <div className="section-title">
-            Leadership &amp; Activities
+            Volanteering
             <div className="underline"></div>
           </div>
         </div>
+        {/* FA Alumni */}
         <div className="act-grid reveal">
           <div className="act-card">
             <div className="logo-display-box">
-              <img src={`${import.meta.env.BASE_URL}image/IEEE_logo.jfif`} alt="IEEE Logo" loading="lazy" />
+              <img src={`${import.meta.env.BASE_URL}image/FA Alumni Logo.jpg`} alt="IEEE Logo" loading="lazy" />
             </div>
             <div className="act-text">
-              <strong>Public Relations (PR) Volunteer – IEEE OE</strong>
-              <span style={{ color: "var(--accent2)", fontSize: "0.9rem", display: "block", marginBottom: "0.5rem" }}>Oct 2025 – Present</span>
-              <p>Communicated with startups and companies for partnerships and sponsorships, and delivered a 15-minute Operating Systems presentation.</p>
-              <a href="https://www.linkedin.com/feed/update/urn:li:activity:7411410713463758848/" target="_blank" rel="noopener" className="soc-btn" title="View on LinkedIn" style={{ marginTop: "0.8rem" }}><LinkedInSVG /></a>
+              <strong>Head FR - FA Alumni</strong>
+              <span style={{ color: "var(--accent2)", fontSize: "0.9rem", display: "block", marginBottom: "0.5rem" }}>Feb 2026 – Present</span>
+              <p>Leading the FR team by managing volunteers, coordinating fundraising activities, and ensuring effective team collaboration. Responsible for planning initiatives, improving workflow, and contributing to achieving a 150K EGP fundraising target during the current season.</p>
             </div>
           </div>
+
+          {/*IEEE OE*/}
+          <div className="act-card">
+            <div className="logo-display-box">
+              <img src={`${import.meta.env.BASE_URL}image/IEEE_logo.jpg`} alt="IEEE Logo" loading="lazy" />
+            </div>
+            <div className="act-text">
+              <strong>PR Member – IEEE OE</strong>
+              <span style={{ color: "var(--accent2)", fontSize: "0.9rem", display: "block", marginBottom: "0.5rem" }}>Nov 2025 – Present</span>
+              <p>Managed communication with companies and startups for partnerships and sponsorship opportunities, delivered a 15-minute Operating Systems session, and supported the organization of IEEE Synapse event with 1000+ attendees.</p>
+              <a  href="https://www.linkedin.com/feed/update/urn:li:activity:7411410713463758848/"  target="_blank" rel="noopener" className="soc-btn" title="View on LinkedIn" style={{ marginTop: "0.8rem" }}><LinkedInSVG /></a>
+              <a  href="https://www.linkedin.com/feed/update/urn:li:activity:7401600664843243520/"  target="_blank" rel="noopener" className="soc-btn" title="View on LinkedIn" style={{ marginTop: "0.8rem" }}><LinkedInSVG /></a>
+
+            </div>
+          </div>
+
           <div className="act-card">
             <div className="logo-display-box">
               <img src={`${import.meta.env.BASE_URL}image/University_Logo.jfif`} alt="Zagazig University Logo" loading="lazy" />
             </div>
             <div className="act-text">
-              <strong>Leadership – Class Representative</strong>
+              <strong>Leadership – ZU</strong>
               <span style={{ color: "var(--accent2)", fontSize: "0.9rem", display: "block", marginBottom: "0.5rem" }}>Oct 2023 – Present</span>
               <p>Helping and mentoring 350+ students in Computer Science concepts and coding practices while coordinating communication between students and professors.</p>
             </div>
@@ -810,15 +830,19 @@ export default function App() {
                 <div className="testi-stars">★★★★★</div>
                 <div className="testi-badge"><i className="fas fa-book-open"></i> Committed Learner</div>
               </div>
-              <p className="testi-text">"During the DEPI initiative, Mohammed showed exceptional commitment. His grasp of .NET architecture patterns like Repository and Unit of Work was highly impressive."</p>
+              <p className="testi-text">"I had the opportunity to mentor Mohamed throughout the Freelancing and Coaching phases over the course of several months. During this period, he consistently demonstrated professionalism, dedication, and a strong commitment to continuous improvement.
+
+                Mohamed approached every task with attention to detail, accountability, and a results-oriented mindset. His ability to learn quickly, apply feedback effectively, and maintain high-quality standards contributed significantly to his successful completion of the program.
+
+                I am confident that Mohamed's work ethic, persistence, and professional attitude will make him a valuable asset to any team or organization. I highly recommend him for future opportunities."</p>
               <div className="testi-footer">
                 <div className="testi-avatar">SM</div>
                 <div className="testi-info">
-                  <h4>Dr. Sara Mostafa</h4>
+                  <h4>SWE. Menna Omar</h4>
                   <span>DEPI Training Instructor</span>
                 </div>
                 <div className="testi-linkedin">
-                  <a href="#" className="soc-btn" title="LinkedIn" target="_blank" rel="noopener"><LinkedInSVG /></a>
+                  <a href="https://www.linkedin.com/in/mennaomar/" className="soc-btn" title="LinkedIn" target="_blank" rel="noopener"><LinkedInSVG /></a>
                 </div>
               </div>
             </div>
@@ -840,7 +864,7 @@ export default function App() {
             <h3>Let's Talk</h3>
             <p>Have a project in mind or want to discuss the latest in tech? Feel free to reach out.</p>
             <div style={{ marginTop: "2rem" }}>
-              <p style={{ marginBottom: "1rem" }}><i className="fas fa-envelope"></i> mohammedpanda60@gmail.com</p>
+              <p style={{ marginBottom: "1rem" }}><i className="fas fa-envelope"></i> mohammedwaelgadallah@gmail.com</p>
               <p style={{ marginBottom: "1rem" }}><i className="fab fa-whatsapp"></i> +20 1034320898</p>
               <p><i className="fas fa-map-marker-alt"></i> 10th of Ramadan, Egypt</p>
             </div>
@@ -882,8 +906,8 @@ export default function App() {
             </p>
             <div className="hero-socials" style={{ marginTop: "1.5rem" }}>
               <a href="https://github.com/mohammedwael7" className="soc-btn" title="GitHub" target="_blank" rel="noopener"><GitHubSVG /></a>
-              <a href="https://www.linkedin.com/in/mohammed-wael-gadallah" className="soc-btn" title="LinkedIn" target="_blank" rel="noopener"><LinkedInSVG /></a>
-              <a href="mailto:mohammedpanda60@gmail.com" className="soc-btn" title="Email"><EmailSVG /></a>
+              <a href="https://www.linkedin.com/in/m0hamedwael" className="soc-btn" title="LinkedIn" target="_blank" rel="noopener"><LinkedInSVG /></a>
+              <a href="mailto:mohammedwaelgadallah@gmail.com" className="soc-btn" title="Email"><EmailSVG /></a>
               <a href="tel:+201034320898" className="soc-btn" title="Phone"><PhoneSVG /></a>
             </div>
           </div>
@@ -900,7 +924,7 @@ export default function App() {
           <div className="footer-links">
             <h4>Contact</h4>
             <ul style={{ color: "var(--muted)" }}>
-              <li><i className="fas fa-envelope" style={{ color: "rgb(43, 125, 226)" }}></i> mohammedpanda60@gmail.com</li>
+              <li><i className="fas fa-envelope" style={{ color: "rgb(43, 125, 226)" }}></i> mohammedwaelgadallah@gmail.com</li>
               <li><i className="fas fa-phone" style={{ color: "rgb(43, 125, 226)" }}></i> +20 1034320898</li>
               <li><i className="fas fa-location-dot" style={{ color: "rgb(43, 125, 226)" }}></i> 10th of Ramadan, Egypt</li>
             </ul>
