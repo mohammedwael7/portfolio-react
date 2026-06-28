@@ -6,7 +6,7 @@ A personal portfolio website built to showcase my skills, projects, experience, 
 
 The website provides a clean and responsive interface where visitors can explore my work, learn more about me, and view my technical skills.
 
-<img width="1280" height="714" alt="portfolio" src="https://github.com/user-attachments/assets/12182116-deb5-4781-ac7d-61e4873f2467" />
+<img width="1672" height="941" alt="ChatGPT Image Jun 29, 2026, 12_52_41 AM" src="https://github.com/user-attachments/assets/e7b67001-b683-444b-a318-70e2ec53ccca" />
 
 ---
 
