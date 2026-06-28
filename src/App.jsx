@@ -564,7 +564,7 @@ export default function App() {
           </div>
         </div>
 
-        {/* Pricing Plans */}
+        {/* Pricing Plans
         <div id="pricing" style={{ marginTop: "4rem" }}>
           <div className="reveal">
             <div className="section-header-centered">
@@ -638,7 +638,7 @@ export default function App() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ══ PROJECTS ══ */}
       <section id="projects">
