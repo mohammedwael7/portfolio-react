@@ -858,7 +858,7 @@ export default function App() {
 
                 I am confident that Mohamed's work ethic, persistence, and professional attitude will make him a valuable asset to any team or organization. I highly recommend him for future opportunities."</p>
               <div className="testi-footer">
-                <div className="testi-avatar">SM</div>
+                <div className="testi-avatar">MO</div>
                 <div className="testi-info">
                   <h4>SWE. Menna Omar</h4>
                   <span>DEPI Training Instructor</span>
