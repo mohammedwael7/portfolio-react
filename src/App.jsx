@@ -25,14 +25,19 @@ const PhoneSVG = () => (
     <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58z" />
   </svg>
 );
+const WhatsAppSVG = () => (
+  <svg viewBox="0 0 16 16" aria-hidden="true">
+    <path d="M13.601 2.326A7.85 7.85 0 0 0 8.05.03C3.74.03.24 3.53.24 7.84c0 1.38.36 2.73 1.05 3.92L.2 15.8l4.17-1.09a7.8 7.8 0 0 0 3.68.94h.01c4.31 0 7.81-3.5 7.81-7.81a7.76 7.76 0 0 0-2.27-5.51ZM8.05 14.3a6.5 6.5 0 0 1-3.32-.91l-.24-.14-2.48.65.66-2.42-.16-.25a6.48 6.48 0 0 1-1-3.47c0-3.59 2.93-6.52 6.54-6.52 1.74 0 3.38.68 4.61 1.91a6.48 6.48 0 0 1 1.91 4.61c0 3.6-2.93 6.54-6.52 6.54Zm3.58-4.88c-.2-.1-1.16-.57-1.34-.64-.18-.07-.31-.1-.44.1-.13.2-.5.64-.61.77-.11.13-.22.15-.42.05-.2-.1-.83-.3-1.58-.95-.58-.52-.97-1.16-1.08-1.36-.11-.2-.01-.3.08-.4.08-.08.2-.22.3-.33.1-.11.13-.2.2-.33.07-.13.03-.24-.02-.34-.05-.1-.44-1.05-.6-1.44-.16-.38-.32-.33-.44-.34h-.37c-.13 0-.34.05-.52.24-.18.2-.68.66-.68 1.61s.7 1.87.8 2c.1.13 1.38 2.1 3.34 2.95.47.2.84.32 1.13.41.48.15.91.13 1.25.08.38-.06 1.16-.47 1.32-.92.16-.45.16-.84.11-.92-.05-.08-.18-.13-.38-.23Z" />
+  </svg>
+);
 
 export default function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [scrollTopVisible, setScrollTopVisible] = useState(false);
   const [activeNav, setActiveNav] = useState("home");
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-  const [formStatus, setFormStatus] = useState({ type: "", text: "" });
-  const [isSending, setIsSending] = useState(false);
+  // const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  // const [formStatus, setFormStatus] = useState({ type: "", text: "" });
+  // const [isSending, setIsSending] = useState(false);
   const carouselRef = useRef(null);
 
   /* ── EmailJS init ── */
@@ -96,33 +101,33 @@ export default function App() {
     };
   }, []);
 
-  /* ── Email Send ── */
-  const sendEmail = () => {
-    const { name, email, message } = formData;
-    if (!name || !email || !message) {
-      setFormStatus({ type: "error", text: "⚠️ Please fill in all fields." });
-      return;
-    }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      setFormStatus({ type: "error", text: "⚠️ Please enter a valid email address." });
-      return;
-    }
-    setIsSending(true);
-    emailjs
-      .send("service_eb6q8q8", "template_z8zt0z8", { from_name: name, from_email: email, message, to_name: "Mohammed Wael" })
-      .then(() => {
-        setFormStatus({ type: "success", text: "✅ Message sent successfully! I'll get back to you soon." });
-        setFormData({ name: "", email: "", message: "" });
-      })
-      .catch((err) => {
-        console.error(err);
-        setFormStatus({ type: "error", text: "❌ Something went wrong. Please try again or email me directly." });
-      })
-      .finally(() => {
-        setIsSending(false);
-        setTimeout(() => setFormStatus({ type: "", text: "" }), 6000);
-      });
-  };
+  // /* ── Email Send ── */
+  // const sendEmail = () => {
+  //   const { name, email, message } = formData;
+  //   if (!name || !email || !message) {
+  //     setFormStatus({ type: "error", text: "⚠️ Please fill in all fields." });
+  //     return;
+  //   }
+  //   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+  //     setFormStatus({ type: "error", text: "⚠️ Please enter a valid email address." });
+  //     return;
+  //   }
+  //   setIsSending(true);
+  //   emailjs
+  //     .send("service_eb6q8q8", "template_z8zt0z8", { from_name: name, from_email: email, message, to_name: "Mohammed Wael" })
+  //     .then(() => {
+  //       setFormStatus({ type: "success", text: "✅ Message sent successfully! I'll get back to you soon." });
+  //       setFormData({ name: "", email: "", message: "" });
+  //     })
+  //     .catch((err) => {
+  //       console.error(err);
+  //       setFormStatus({ type: "error", text: "❌ Something went wrong. Please try again or email me directly." });
+  //     })
+  //     .finally(() => {
+  //       setIsSending(false);
+  //       setTimeout(() => setFormStatus({ type: "", text: "" }), 6000);
+  //     });
+  // };
 
   const scrollToContact = () => document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
 
@@ -185,7 +190,9 @@ export default function App() {
             <a href="https://github.com/mohammedwael7" className="soc-btn" title="GitHub" target="_blank" rel="noopener"><GitHubSVG /></a>
             <a href="https://www.linkedin.com/in/m0hamedwael" className="soc-btn" title="LinkedIn" target="_blank" rel="noopener"><LinkedInSVG /></a>
             <a href="mailto:mohammedwaelgadallah@gmail.com" className="soc-btn" title="Email" target="_blank"><EmailSVG /></a>
-            <a href="https://wa.me/201034320898" className="soc-btn" title="WhatsApp" target="_blank"><PhoneSVG /></a>
+            <a href="https://wa.me/201034320898" className="soc-btn" title="WhatsApp" target="_blank"><WhatsAppSVG /></a>
+            <a href="tel:+201034320898" className="soc-btn" title="phone" target="_blank"><PhoneSVG /></a>
+
           </div>
           <br />
           <div>
@@ -228,7 +235,9 @@ export default function App() {
             <a href="https://github.com/mohammedwael7" className="soc-btn" title="GitHub" target="_blank" rel="noopener"><GitHubSVG /></a>
             <a href="https://www.linkedin.com/in/m0hamedwael" className="soc-btn" title="LinkedIn" target="_blank" rel="noopener"><LinkedInSVG /></a>
             <a href="mailto:mohammedwaelgadallah@gmail.com" className="soc-btn" title="Email" target="_blank"><EmailSVG /></a>
-            <a href="https://wa.me/201034320898" className="soc-btn" title="WhatsApp" target="_blank"><PhoneSVG /></a>
+            <a href="https://wa.me/201034320898" className="soc-btn" title="WhatsApp" target="_blank"><WhatsAppSVG /></a>
+            <a href="tel:+201034320898" className="soc-btn" title="Phone" target="_blank"><PhoneSVG /></a>
+
           </div>
         </div>
         <div className="hero-photo">
@@ -671,11 +680,12 @@ export default function App() {
                 Created a professional and responsive website that provides a smooth user experience and helps customers quickly connect with the dry cleaning service.
               </div>
               <div className="skill-tags">
-              <span className="skill-tag devicon-html5-plain i-html"> HTML</span>
-              <span className="skill-tag devicon-css3-plain i-css"> CSS</span>
-              <span className="skill-tag devicon-javascript-plain i-js"> JavaScript</span>
-              <span className="skill-tag devicon-bootstrap-plain i-bootstrap"> Bootstrap</span>
-              <span className="skill-tag devicon-react-original-wordmark i-react"> React</span>
+                <span className="skill-tag devicon-figma-plain i-figma"> UI/UX</span>
+                <span className="skill-tag devicon-html5-plain i-html"> HTML</span>
+                <span className="skill-tag devicon-css3-plain i-css"> CSS</span>
+                <span className="skill-tag devicon-javascript-plain i-js"> JavaScript</span>
+                <span className="skill-tag devicon-bootstrap-plain i-bootstrap"> Bootstrap</span>
+                <span className="skill-tag devicon-react-original-wordmark i-react"> React</span>
 
               </div>
               <div className="proj-footer hero-socials">
@@ -702,10 +712,10 @@ export default function App() {
                 Delivered a functional, interactive platform that helps learners explore and enroll in web development tracks easily.
               </div>
               <div className="skill-tags">
-              <span className="skill-tag devicon-html5-plain i-html"> HTML</span>
-              <span className="skill-tag devicon-css3-plain i-css"> CSS</span>
-              <span className="skill-tag devicon-javascript-plain i-js"> JavaScript</span>
-              <span className="skill-tag devicon-bootstrap-plain i-bootstrap"> Bootstrap</span>
+                <span className="skill-tag devicon-html5-plain i-html"> HTML</span>
+                <span className="skill-tag devicon-css3-plain i-css"> CSS</span>
+                <span className="skill-tag devicon-javascript-plain i-js"> JavaScript</span>
+                <span className="skill-tag devicon-bootstrap-plain i-bootstrap"> Bootstrap</span>
               </div>
               <div className="proj-footer hero-socials">
                 <a href="https://mohammedwael7.github.io/Web-Tracks/" className="btn-link" target="_blank"><span>🌐</span> Live Demo</a>
@@ -724,7 +734,7 @@ export default function App() {
               <div className="proj-title">Stone-Paper-Scissors-Game</div>
               <div className="proj-desc">
                 <span className="Challenge">Challenge:</span><br />
-                Designed a console-based Stone, Paper, Scissors game while applying Object-Oriented Programming concepts and improving problem-solving skills. The main challenge was creating a clean structure with reusable logic and handling different game scenarios.<br />
+                Designed a console-based Stone, Paper, Scissors game while applying Object-Oriented Programming concepts and improving problem-solving skills.<br />
                 <span className="Action">Action:</span><br />
                 Developed the game using C++ with OOP principles, including classes, objects, encapsulation, and organized game flow. Implemented the core logic and user interactions to create a smooth gameplay experience.<br />
                 <span className="Result">Result:</span><br />
@@ -862,8 +872,8 @@ export default function App() {
         </div>
       </section>
 
-      {/* ══ CONTACT ══ */}
-      <section className="alt-bg" id="contact">
+      {/* ══ CONTACT & Footer ══ */}
+      <section className="alt-bg " id="contact">
         <div className="reveal" style={{ textAlign: "center", marginBottom: "3rem" }}>
           <div className="section-label">Let's Connect</div>
           <h2 className="section-title">
@@ -871,17 +881,49 @@ export default function App() {
             <div className="underline"></div>
           </h2>
         </div>
-        <div className="contact-container reveal">
-          <div className="contact-info-box">
+        {/* <div className="contact-container reveal"> */}
+        <div className="footer-grid">
+          <div className="contact-info-box ">
             <h3>Let's Talk</h3>
             <p>Have a project in mind or want to discuss the latest in tech? Feel free to reach out.</p>
             <div style={{ marginTop: "2rem" }}>
-              <p style={{ marginBottom: "1rem" }}><i className="fas fa-envelope"></i> mohammedwaelgadallah@gmail.com</p>
-              <p style={{ marginBottom: "1rem" }}><i className="fab fa-whatsapp"></i> +20 1034320898</p>
-              <p><i className="fas fa-map-marker-alt"></i> 10th of Ramadan, Egypt</p>
+              <div className="hero-socials" style={{ display: "block" }}>
+                <a href="https://wa.me/201034320898" className="soc-btn soc-btn-contact" title="WhatsApp" target="_blank"><WhatsAppSVG /></a><span style={{ marginBottom: "1rem" }}> +20 1034320898</span><br />
+                <a href="mailto:mohammedwaelgadallah@gmail.com" className="soc-btn soc-btn-contact" title="Email" target="_blank"><EmailSVG /></a><span style={{ marginBottom: "1rem" }}> mohammedwaelgadallah@gmail</span><br />
+                <a href="https://www.linkedin.com/in/m0hamedwael" className="soc-btn soc-btn-contact" title="LinkedIn" target="_blank" rel="noopener"><LinkedInSVG /></a><span style={{ marginBottom: "1rem" }}> linkedin.com/in/m0hamedwael</span><br />
+                <a href="tel:+201034320898" className="soc-btn soc-btn-contact" title="Phone" target="_blank"><PhoneSVG /></a><span style={{ marginBottom: "1rem" }}> +20 1034320898</span><br />
+              </div>
             </div>
           </div>
-          <div className="contact-form-box">
+          <div>
+            <div className="footer-logo">
+              <a href="#home" className="nav-logo-link" aria-label="Home">
+                <img src={`${import.meta.env.BASE_URL}image/My_logo.png`} alt="Logo" className="nav-logo-img" />
+              </a>
+            </div>
+            <p style={{ color: "var(--muted)", lineHeight: "1.6", marginTop: "1rem" }}>
+              Full Stack .NET Developer focused on building scalable web applications with clean, maintainable code.
+            </p>
+            <div className="hero-socials" style={{ marginTop: "1.5rem" }}>
+              <a href="https://github.com/mohammedwael7" className="soc-btn" title="GitHub" target="_blank" rel="noopener"><GitHubSVG /></a>
+              <a href="https://www.linkedin.com/in/m0hamedwael" className="soc-btn" title="LinkedIn" target="_blank" rel="noopener"><LinkedInSVG /></a>
+              <a href="mailto:mohammedwaelgadallah@gmail.com" className="soc-btn" title="Email" target="_blank"><EmailSVG /></a>
+              <a href="https://wa.me/201034320898" className="soc-btn" title="WhatsApp" target="_blank"><WhatsAppSVG /></a>
+              <a href="tel:+201034320898" className="soc-btn" title="Phone" target="_blank"><PhoneSVG /></a>
+            </div>
+          </div>
+          <div className="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        {/* <div className="contact-form-box">
             {formStatus.text && (
               <div className={`form-status ${formStatus.type}`} aria-live="polite">{formStatus.text}</div>
             )}
@@ -900,13 +942,13 @@ export default function App() {
             <button type="button" className="btn-send" onClick={sendEmail} disabled={isSending}>
               {isSending ? <><i className="fas fa-spinner fa-spin"></i> Sending...</> : <>Send Message <i className="fas fa-paper-plane"></i></>}
             </button>
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
       </section>
 
       {/* ══ FOOTER ══ */}
-      <footer className="main-footer">
-        <div className="footer-grid">
+      <footer>
+        {/* <div className="footer-grid">
           <div>
             <div className="footer-logo">
               <a href="#home" className="nav-logo-link" aria-label="Home">
@@ -920,6 +962,7 @@ export default function App() {
               <a href="https://github.com/mohammedwael7" className="soc-btn" title="GitHub" target="_blank" rel="noopener"><GitHubSVG /></a>
               <a href="https://www.linkedin.com/in/m0hamedwael" className="soc-btn" title="LinkedIn" target="_blank" rel="noopener"><LinkedInSVG /></a>
               <a href="mailto:mohammedwaelgadallah@gmail.com" className="soc-btn" title="Email"><EmailSVG /></a>
+              <a href="https://wa.me/201034320898" className="soc-btn" title="WhatsApp" target="_blank"><WhatsAppSVG /></a>
               <a href="tel:+201034320898" className="soc-btn" title="Phone"><PhoneSVG /></a>
             </div>
           </div>
@@ -933,6 +976,7 @@ export default function App() {
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
+
           <div className="footer-links">
             <h4>Contact</h4>
             <ul style={{ color: "var(--muted)" }}>
@@ -940,8 +984,8 @@ export default function App() {
               <li><i className="fas fa-phone" style={{ color: "rgb(43, 125, 226)" }}></i> +20 1034320898</li>
               <li><i className="fas fa-location-dot" style={{ color: "rgb(43, 125, 226)" }}></i> 10th of Ramadan, Egypt</li>
             </ul>
-          </div>
-        </div>
+          </div> 
+        </div> */}
         <div className="footer-bottom">
           © 2026 Mohammed Wael Gadallah. All rights reserved.
         </div>
